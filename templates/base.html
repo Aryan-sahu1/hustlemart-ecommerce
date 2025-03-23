@@ -1,0 +1,216 @@
+ {% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset=" utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HustleMart - {% block title %} {% endblock title %}</title>
+    <meta
+      name="description"
+      content="ecommerce website we deliver products in 1 hours"
+    />
+    <meta name="amazon,flipkart,selling,products," content="ecommerce" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Vendor CSS Files -->
+    <link
+      href="{% static '/assets/vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static '/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static '/assets/vendor/aos/aos.css' %}" rel="stylesheet" />
+    <link
+      href="{% static '/assets/vendor/glightbox/css/glightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static '/assets/vendor/swiper/swiper-bundle.min.css' %}"
+      rel="stylesheet"
+    />
+
+
+    <!-- Main CSS File -->
+    <link href="{% static  '/assets/css/main.css' %}" rel="stylesheet" />
+    <link href="{% static  '/assets/css/testinomial.css' %}" rel="stylesheet" />
+    
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="/" class="logo d-flex align-items-center">
+         
+    <img src="{% static '/images/logo.png'%}" alt=""> 
+          <h1 class="sitename">HustleMart</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+            <li><a href="/about" class="{% if request.path == '/about' %}active{% endif %}">About</a></li>
+            <li><a href="/checkout" class="{% if request.path == '/checkout/' %}active{% endif %}">Checkout</a></li>
+            <li><a href="/profile" class="{% if request.path == '/profile' %}active{% endif %}"> My Profile <i class="fa-solid fa-circle-user"></i></a></li>
+            
+             <button class="nav-link scrollto bg-danger p-3 m-2 text-white" type="button" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"><i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart">0</span>)</button>
+                   
+
+
+            
+            {% if request.user.is_authenticated %}
+               <li><a href="/auth/logout/">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
+ 
+            {% else %}
+             <li class="dropdown">
+              <a href="#"
+                ><span>SignIn <i class="fa-solid fa-user"></i></span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="/auth/signup/">Sign Up <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="/auth/login/">Login <i class="fa-solid fa-user"></i></a></li>
+             
+              </ul>
+            </li>
+            {% endif %}
+
+           
+            <li><a href="/contact" class="bg-dark p-3 m-2 {% if request.path == '/contact/' %}active{% endif %}">Contact <i class="fa-solid fa-message"></i></a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+  
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <img src="{% static 'images/hero-bg.png'%}" alt="" data-aos="fade-in" />
+        <div class="content-up text-center">
+            {% block content %}
+
+
+
+            {% endblock content %}
+        </div >
+
+        </div>
+      </section>
+      <!-- /Hero Section -->
+  <main class="main">
+  {% block body %}
+  
+
+   
+
+  {% endblock body %}
+ </main>
+
+
+ 
+      <footer id="footer" class="footer dark-background">
+        <div class="container footer-top">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-12 footer-about">
+              <a href="/" class="logo d-flex align-items-center">
+                <span class="sitename">HustleMart</span>
+              </a>
+              <p>
+                Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
+                nada terra videa magna derita valies darta donna mare fermentum
+                iaculis eu non diam phasellus.
+              </p>
+              <div class="social-links d-flex mt-4">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About us</a></li>
+                <li><a href="/checkout/">CheckOut</a></li>
+                <li><a href="/term-and-condition">Terms and Condition</a></li>
+                <li><a href="/privacy-policy">Privacy policy</a></li>
+              </ul>
+            </div>
+
+           
+
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+              <h4>Contact Us</h4>
+              <p>281-B Damodar Nagar</p>
+              <p>Barra Kanpur</p>
+              <p>India</p>
+              <p class="mt-4">
+                <strong>Phone:</strong> <a href="tel:7081532300">7081532300</a>
+              </p>
+              <p><strong>Email:</strong> <a href="mailto:aryansahuosvn2006@gmail.com">aryansahuosvn2006@gmail.com</a></p>
+            </div>
+             <div class="col-lg-3 col-6 footer-links">
+             <iframe src="https://www.google.com/maps/embed?pb=!4v1742756964827!6m8!1m7!1sQxmQXrXFp8o8u7rQT0VYpA!2m2!1d26.42149423583063!2d80.30844796217085!3f275.14054930714303!4f17.484031043324293!5f0.4000000000000002"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">HustleMart</strong>
+            <span>All Rights Reserved</span>
+          </p>
+          <div class="credits">
+          
+            Designed by <a href="https://www.linkedin.com/in/aryan-sahu-046b8a239" target="_blank">Aryan Sahu</a>
+          </div>
+        </div>
+      </footer>
+   
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static '/assets/vendor/php-email-form/validate.js '%}"></script>
+    <script src="{% static '/assets/vendor/aos/aos.js '%}"></script>
+    <script src="{% static '/assets/vendor/glightbox/js/glightbox.min.js '%}"></script>
+    <script src="{% static '/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js '%}"></script>
+    <script src="{% static '/assets/vendor/isotope-layout/isotope.pkgd.min.js '%}"></script>
+    <script src="{% static '/assets/vendor/swiper/swiper-bundle.min.js '%}"></script>
+    
+
+    <!-- Main JS File -->
+    <script src="{% static '/assets/js/main.js '%}"></script>
+  </body>
+</html>
+<style>
+.content-up{
+  z-index: 99;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+
+</style>

@@ -1,0 +1,79 @@
+{% extends "base.html" %} 
+{% block title %} Contact {% endblock title %} 
+{%block body %}
+<div class="container my-4">
+  <div class="row">
+   {% for message in messages %}
+
+  <div  class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>{{message}}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {%endfor%}
+    <div>
+      <h2 class="text-center">Contact Us</h2>
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <form action="/contact/" method="post">
+        {% csrf_token %}
+        <br />
+        <label for="name" class="my-2 text-dark"> Full Name</label>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+
+        <label for="email" class="my-2 text-dark">Email</label>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            value="{{user.email}}"
+            required
+          />
+        </div>
+
+        <label for="desc" class="my-2 text-dark">How Can I help You?</label>
+        <div class="form-group">
+          <textarea
+            name="desc"
+            id="desc"
+            type="text"
+            class="form-control "
+            required
+          >
+          </textarea>
+        </div>
+        
+        <label for="phone" class="my-2 text-dark">Phone Number</label>
+        <div class="form-group">
+          <input
+            type="number"
+            class="form-control"
+            id="phone"
+            name="phonen"
+            required
+          />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-dark mb-2">submit</button>
+       
+      </form>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+{% endblock body %}

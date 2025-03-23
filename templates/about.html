@@ -1,0 +1,92 @@
+{% extends "base.html" %} {% block title %} About {% endblock title %} 
+{% block body %} {% load static %}
+<div class="container">
+  <div class="row">
+    <div class="about-content">
+      <p>
+        HustleMart is an energetic eCommerce platform designed for go-getters
+        who are always on the move. If you're a young business owner, fitness
+        enthusiast, trendsetter, or tech geek, HustleMart is your source for
+        quality, affordable, and fashionable products to match your active
+        lifestyle. <br />From the freshest fashion that keeps you sharp to the
+        latest tech gadgets to boost productivity, HustleMart collects only the
+        best for hustlers like you. Do you need top-notch fitness equipment to
+        drive your workouts or productivity equipment to stay ahead of the game?
+        We've got you covered. <br />Our hassle-free shopping experience
+        delivers exactly what you want—quick and easy. With a thoughtfully
+        curated selection, safe payments, and fast shipping, HustleMart makes it
+        simple to shop so you can spend your time on what really counts: your
+        hustle. <br />At HustleMart, we think entrepreneurs should be empowered
+        with products that drive success. No excuses, no waiting—only the best
+        offers on must-have items.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+      <div>
+        <div>
+          <h4 class="text-dark fw-bold">What Makes HustleMart Stand Out?</h4>
+          <ul>
+
+            <li>
+              <h6 class="text-dark fw-600 px-3">
+                 <strong>Work Hard, Shop Smart - </strong>  Handpicked gadgets, productivity tools,
+                and business essentials for entrepreneurs.
+              </h6>
+            </li>
+            <li>
+            <h6 class="text-dark fw-600 px-3">
+<strong >Stay Fit, Stay Fresh – </strong>Trendy activewear, fitness gear, and wellness essentials to power your workouts.
+            </h6>
+            </li>
+
+            <li>
+            <h6 class="text-dark fw-600 px-3">
+<strong >Tech & Innovation – </strong>The latest gadgets, smart accessories, and high-performance electronics.
+            </h6>
+            </li>
+            <li>
+            <h6 class="text-dark fw-600 px-3">
+<strong >Trend-Driven Shopping – </strong> Fashion, accessories, and lifestyle products that keep you ahead of the curve.
+            </h6>
+            </li>
+            <li>
+            <h6 class="text-dark fw-600 px-3">
+<strong >Fast & Hassle-Free – </strong>Easy shopping, secure payments, and lightning-fast delivery to keep up with your hustle.
+            </h6>
+            </li>
+            <li>
+            <h6 class="text-dark fw-600 px-3">
+<strong >Empower Your Lifestyle – </strong>More than a store, HustleMart is a movement for go-getters who strive for success.
+            </h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+      <div>
+        <img
+          src="{% static 'images/about-1.jpg'%}"
+          alt=""
+          data-aos="fade-in"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div></div>
+
+<style>
+  .about-content {
+    width: 87%;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: justify;
+    color: #0000008a;
+  }
+</style>
+{% endblock body %}
