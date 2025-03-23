@@ -1,4 +1,4 @@
 # hustlemart-ecommerce
 
-<!-- to run project
-python manage.py runserver -->
+# to run project
+python manage.py runserver 
