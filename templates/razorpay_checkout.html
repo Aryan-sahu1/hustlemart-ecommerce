@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block title %} Razorpay Payment {% endblock %} 
+{% block body %}
+<h1 class="text-center">Complete Your Payment</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+      <div>
+        <form id="razorpay-form" class="text-center my-5">
+          <script
+            src="https://checkout.razorpay.com/v1/checkout.js"
+            data-key="{{ razorpay_key }}"
+            data-amount="{{ order.amount|floatformat:2|add:'0' }}"
+            data-currency="INR"
+            data-order_id="{{ razorpay_order.id }}"
+            data-buttontext="Pay Now"
+            data-name="Shopycart"
+            data-description="Secure Payment"
+            data-theme.color="#F37254"
+          ></script>
+          <input type="hidden" name="order_id" value="{{ order.order_id }}" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+#razorpay-form input{
+
+      color: #ffffff;
+    background: #fb641b;
+    padding: 7px 41px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: 0;
+}
+</style>
+{% endblock %}

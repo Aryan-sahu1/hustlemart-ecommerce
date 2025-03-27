@@ -1,5 +1,11 @@
-{% extends "base.html" %} {% block title %} About {% endblock title %} 
-{% block body %} {% load static %}
+{% extends "base.html" %}
+{% block title %} About {% endblock title %} 
+{% blockcontent %}
+<h1>Welcome to About Page</h1>
+<h4>"HustleMart – The Ultimate Marketplace for Go-Getters!"</h4>
+{% endblock content %} 
+{% block body %} 
+{% load static %}
 <div class="container">
   <div class="row">
     <div class="about-content">
@@ -23,49 +29,54 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-3">
       <div>
         <div>
           <h4 class="text-dark fw-bold">What Makes HustleMart Stand Out?</h4>
           <ul>
-
             <li>
               <h6 class="text-dark fw-600 px-3">
-                 <strong>Work Hard, Shop Smart - </strong>  Handpicked gadgets, productivity tools,
-                and business essentials for entrepreneurs.
+                <strong>Work Hard, Shop Smart - </strong> Handpicked gadgets,
+                productivity tools, and business essentials for entrepreneurs.
               </h6>
             </li>
             <li>
-            <h6 class="text-dark fw-600 px-3">
-<strong >Stay Fit, Stay Fresh – </strong>Trendy activewear, fitness gear, and wellness essentials to power your workouts.
-            </h6>
+              <h6 class="text-dark fw-600 px-3">
+                <strong>Stay Fit, Stay Fresh – </strong>Trendy activewear,
+                fitness gear, and wellness essentials to power your workouts.
+              </h6>
             </li>
 
             <li>
-            <h6 class="text-dark fw-600 px-3">
-<strong >Tech & Innovation – </strong>The latest gadgets, smart accessories, and high-performance electronics.
-            </h6>
+              <h6 class="text-dark fw-600 px-3">
+                <strong>Tech & Innovation – </strong>The latest gadgets, smart
+                accessories, and high-performance electronics.
+              </h6>
             </li>
             <li>
-            <h6 class="text-dark fw-600 px-3">
-<strong >Trend-Driven Shopping – </strong> Fashion, accessories, and lifestyle products that keep you ahead of the curve.
-            </h6>
+              <h6 class="text-dark fw-600 px-3">
+                <strong>Trend-Driven Shopping – </strong> Fashion, accessories,
+                and lifestyle products that keep you ahead of the curve.
+              </h6>
             </li>
             <li>
-            <h6 class="text-dark fw-600 px-3">
-<strong >Fast & Hassle-Free – </strong>Easy shopping, secure payments, and lightning-fast delivery to keep up with your hustle.
-            </h6>
+              <h6 class="text-dark fw-600 px-3">
+                <strong>Fast & Hassle-Free – </strong>Easy shopping, secure
+                payments, and lightning-fast delivery to keep up with your
+                hustle.
+              </h6>
             </li>
             <li>
-            <h6 class="text-dark fw-600 px-3">
-<strong >Empower Your Lifestyle – </strong>More than a store, HustleMart is a movement for go-getters who strive for success.
-            </h6>
+              <h6 class="text-dark fw-600 px-3">
+                <strong>Empower Your Lifestyle – </strong>More than a store,
+                HustleMart is a movement for go-getters who strive for success.
+              </h6>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-3">
       <div>
         <img
           src="{% static 'images/about-1.jpg'%}"
@@ -77,7 +88,6 @@
     </div>
   </div>
 </div>
-<div></div>
 
 <style>
   .about-content {

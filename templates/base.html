@@ -3,6 +3,7 @@
 <html lang="en">
   <head>
     <meta charset=" utf-8" />
+     <link rel="icon" type="image/x-icon" href="./static/images/logo.png">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>HustleMart - {% block title %} {% endblock title %}</title>
     <meta
@@ -62,11 +63,9 @@
             
              <button class="nav-link scrollto bg-danger p-3 m-2 text-white" type="button" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"><i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart">0</span>)</button>
                    
-
-
-            
-            {% if request.user.is_authenticated %}
-               <li><a href="/auth/logout/">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
+               <li>
+               <a href="/auth/logout/">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+               </li>
  
             {% else %}
              <li class="dropdown">
@@ -81,7 +80,6 @@
               </ul>
             </li>
             {% endif %}
-
            
             <li><a href="/contact" class="bg-dark p-3 m-2 {% if request.path == '/contact/' %}active{% endif %}">Contact <i class="fa-solid fa-message"></i></a></li>
           </ul>
@@ -90,53 +88,39 @@
       </div>
     </header>
 
-  
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
         <img src="{% static 'images/hero-bg.png'%}" alt="" data-aos="fade-in" />
         <div class="content-up text-center">
             {% block content %}
-
-
-
             {% endblock content %}
         </div >
-
         </div>
       </section>
       <!-- /Hero Section -->
   <main class="main">
   {% block body %}
-  
-
-   
 
   {% endblock body %}
- </main>
-
-
- 
+ </main> 
       <footer id="footer" class="footer dark-background">
         <div class="container footer-top">
           <div class="row gy-4">
-            <div class="col-lg-4 col-md-12 footer-about">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12 footer-about">
               <a href="/" class="logo d-flex align-items-center">
                 <span class="sitename">HustleMart</span>
               </a>
               <p>
-                Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
-                nada terra videa magna derita valies darta donna mare fermentum
-                iaculis eu non diam phasellus.
+              HustleMart: where ambition and convenience collide. We power your grind with great products, clever deals, and unmatched value. Shop smart, hustle hard. Chasing dreams or crushing goals, we've got you covered. Hustle. Shop. Repeat. Because success begins with the right decisions—make them at HustleMart!"
               </p>
               <div class="social-links d-flex mt-4">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href="https://x.com/Aryan92969Sahu?t=0zzonOJgH7MQzsld0z6viA&s=09" target="_blank"><i class="bi bi-twitter-x" ></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/itz.avvi.sahu?igsh=MTdyemkxOTV5d3Bscw==" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/aryan-sahu-046b8a239/" target="_blank"><i class="bi bi-linkedin" ></i></a>
               </div>
             </div>
-
-            <div class="col-lg-2 col-6 footer-links">
+            <div class="col-lg-2 col-md-6 col-sm-12 col-12 footer-links">
               <h4>Useful Links</h4>
               <ul>
                 <li><a href="/">Home</a></li>
@@ -145,11 +129,8 @@
                 <li><a href="/term-and-condition">Terms and Condition</a></li>
                 <li><a href="/privacy-policy">Privacy policy</a></li>
               </ul>
-            </div>
-
-           
-
-            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            </div> 
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 footer-contact text-md-start">
               <h4>Contact Us</h4>
               <p>281-B Damodar Nagar</p>
               <p>Barra Kanpur</p>
@@ -159,7 +140,7 @@
               </p>
               <p><strong>Email:</strong> <a href="mailto:aryansahuosvn2006@gmail.com">aryansahuosvn2006@gmail.com</a></p>
             </div>
-             <div class="col-lg-3 col-6 footer-links">
+             <div class="col-lg-3 col-md-6 col-sm-12 col-12 footer-links">
              <iframe src="https://www.google.com/maps/embed?pb=!4v1742756964827!6m8!1m7!1sQxmQXrXFp8o8u7rQT0VYpA!2m2!1d26.42149423583063!2d80.30844796217085!3f275.14054930714303!4f17.484031043324293!5f0.4000000000000002"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
@@ -176,9 +157,7 @@
             Designed by <a href="https://www.linkedin.com/in/aryan-sahu-046b8a239" target="_blank">Aryan Sahu</a>
           </div>
         </div>
-      </footer>
-   
-
+      </footer> 
     <!-- Scroll Top -->
     <a
       href="#"

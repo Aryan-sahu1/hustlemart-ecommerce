@@ -116,12 +116,12 @@ USE_TZ = True
 
 # sending mails
 
-# EMAIL_HOST='smtpout.secureserver.net'
-# EMAIL_HOST_USER='avvisahu2006@gmail.com'
-# EMAIL_HOST_PASSWORD='aman@123#'
-# EMAIL_PORT=2525
-# EMAIL_USE_TLS=True
-# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='avvisahu2006@gmail.com'
+EMAIL_HOST_PASSWORD='qwys usrc qnzk ftkx'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
 
 # Static files (CSS, JavaScript, Images)
@@ -149,3 +149,7 @@ MESSAGE_TAGS={
 
 MEDIA_URL ='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+
+RAZORPAY_KEY_ID = "rzp_test_hr8ClIljUhrox5"
+RAZORPAY_KEY_SECRET = "7Rh1BNsNkWj6uy4ssFy5E1Yd"
