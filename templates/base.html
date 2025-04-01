@@ -60,7 +60,9 @@
             <li><a href="/about" class="{% if request.path == '/about' %}active{% endif %}">About</a></li>
             <li><a href="/checkout" class="{% if request.path == '/checkout/' %}active{% endif %}">Checkout</a></li>
             <li><a href="/profile" class="{% if request.path == '/profile' %}active{% endif %}"> My Profile <i class="fa-solid fa-circle-user"></i></a></li>
+            {% if user.is_authenticated %}
             
+           
              <button class="nav-link scrollto bg-danger p-3 m-2 text-white" type="button" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"><i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart">0</span>)</button>
                    
                <li>
@@ -93,6 +95,7 @@
         <img src="{% static 'images/hero-bg.png'%}" alt="" data-aos="fade-in" />
         <div class="content-up text-center">
             {% block content %}
+            
             {% endblock content %}
         </div >
         </div>
@@ -140,8 +143,8 @@
               </p>
               <p><strong>Email:</strong> <a href="mailto:aryansahuosvn2006@gmail.com">aryansahuosvn2006@gmail.com</a></p>
             </div>
-             <div class="col-lg-3 col-md-6 col-sm-12 col-12 footer-links">
-             <iframe src="https://www.google.com/maps/embed?pb=!4v1742756964827!6m8!1m7!1sQxmQXrXFp8o8u7rQT0VYpA!2m2!1d26.42149423583063!2d80.30844796217085!3f275.14054930714303!4f17.484031043324293!5f0.4000000000000002"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-12 footer-links">
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1743322282440!6m8!1m7!1ssmsNzJ3Ksy_sK06UeGgpNw!2m2!1d26.42168668743373!2d80.30804285940074!3f211.1027664788412!4f1.2558824289276629!5f0.7820865974627469"  style="border:0;" allowfullscreen="" loading="lazy" style="border:0;" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
