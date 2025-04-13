@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
@@ -40,7 +40,6 @@ def contact(request):
         email = request.POST.get("email")
         desc = request.POST.get("desc")
         phonen = request.POST.get("phonen")
-
         if name and email and desc and phonen:  # Basic validation
             myquery = Contact(name=name, email=email, desc=desc, phonenumber=phonen)
             myquery.save()
@@ -57,7 +56,6 @@ def checkout(request):
     if not request.user.is_authenticated:
         messages.warning(request, "Login & try Again")
         return redirect('/auth/login')
-
     if request.method == "POST":
         try:
             items_json = request.POST.get('itemsJson', '')    
@@ -104,8 +102,6 @@ def checkout(request):
             return redirect("checkout")
 
     return render(request, 'checkout.html')
-
-
 
 # Razorpay Payment Handling
 @csrf_exempt
