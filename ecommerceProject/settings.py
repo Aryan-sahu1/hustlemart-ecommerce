@@ -154,4 +154,4 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 RAZORPAY_KEY_ID = "rzp_test_hr8ClIljUhrox5"
 RAZORPAY_KEY_SECRET = "7Rh1BNsNkWj6uy4ssFy5E1Yd"
 
-ALLOWED_HOSTS=['.vercel.app']
+ALLOWED_HOSTS=['127.0.0.1']
